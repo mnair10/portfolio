@@ -1,230 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Your Name</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Custom CSS -->
+  <head>
+    <title>Mithun Nair Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="light-mode">
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Portfolio</a>
-            <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="text-content">
-                    <h1 class="animate-text">Hi, I'm <span class="highlight">Your Name</span></h1>
-                    <h2 class="animate-text">I'm a <span class="typing-text"></span></h2>
-                    <p class="animate-text">Program Manager | Business Analyst | Data Analyst</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn primary-btn">Get in Touch</a>
-                        <a href="#projects" class="btn secondary-btn">View My Work</a>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="blob-animation"></div>
-            </div>
-        </div>
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Mithun Nair</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+	  <section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+		  <div class="slider-item">
+			<div class="overlay"></div>
+			<div class="container">
+			  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="background-image:url('images/back-2.jpg'); background-position: right; background-size: contain;">
+				</div>
+				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+				  <div class="text">
+					<span class="subheading">Hello!</span>
+					<h1 class="mb-4 mt-3">I'm <span>Mithun Nair</span></h1>
+	  
+					<!-- Element to contain animated typing -->
+					<span id="typing-animation"></span>
+	  
+					<script>
+					  // Initialize the typing animation
+					  const typingAnimationElement = document.getElementById('typing-animation');
+	  
+					  // Create an array of typing text
+					  const typingTexts = [
+						'Program Manager',
+						'Data Analyst',
+						'Business Analyst',
+					  ];
+	  
+					  // Create a function to display the typing animation for a given text
+					  function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+						  setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+						  }, i * 200); // Increase the delay to slow down the typing animation
+						}
+	  
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+						  typingAnimationElement.textContent = '';
+						  playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+					  }
+	  
+					  // Start the typing animation loop
+					  playTypingAnimation(typingTexts[0]);
+					</script>
+	  
+					<br>
+					<br>
+					<h2>Program Manager | Business Analyst | Data Analyst</h2>
+					<p>
+					  <a href="https://github.com/mnair10" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+					</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/WhatsApp Image 2024-03-01 at 16.30.53_93baf69f.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Mithun Nair</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Business Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>4 Years</span></p>
+										<p><span class="title-s">Address: </span> <span>Tempe, AZ</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Experienced Customer Success Manager with 4 years of expertise in program management and process improvement within
+									tech-driven environments. Proven track record of driving business growth for key clients through strategic insights, high
+									operational standards, and innovative solutions. Demonstrates strong proficiency in data analytics, strategic project execution,
+									and client management, using tools like SQL, Tableau, and Excel. Skilled in building and cultivating relationships with internal
+									and external stakeholders, optimizing business processes, and delivering customized insights and recommendations. Adept at
+									managing multiple workflows in fast-paced environments and continuously improving processes to enhance operational
+									efficiencies and customer satisfaction.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Program Management &amp; Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Telecommunications &amp; Customer Experience</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Science in Business Analytics</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Gujurati, Malayalam</span></li>
+									<li class="d-flex"><span>Programming:</span> <span>Python, SQL, SPSS &amp; Minitab</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>E-sports, Hiking, Soccer</span></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <!-- Add your profile image here -->
-                        <img src="assets/images/profile.jpg" alt="Profile Picture">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p class="bio">Your bio will go here. Describe your professional journey, expertise, and what drives you.</p>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <i class="fas fa-user-graduate"></i>
-                            <h3>Education</h3>
-                            <p>Your Education</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-briefcase"></i>
-                            <h3>Experience</h3>
-                            <p>4+ Years</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Location</h3>
-                            <p>Your Location</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-language"></i>
-                            <h3>Languages</h3>
-                            <p>English, Others</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Experienced Operations and Business Analyst with expertise in data analytics and cross-functional collaboration using Tableau, Salesforce, and Excel. Skilled in developing pricing strategies, managing revenue pipelines, and enhancing operational efficiencies. Proven ability to drive strategic decisions and support business initiatives in dynamic environments.
+          </div>
         </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2022 – June 2023</span>
+						<h2>Team Leader, Sales Operations</h2>
+						<span class="position">Etech Global Services, Gujarat, India</span>
+						<p class="mt-4">
+							<ul>
+								<li>Lead Cross-Functional Collaboration: Spearheaded a team that collaborated across sales, product management, and IT to enhance data-driven decision-making, leading to a 25% increase in lead conversions through the development of an advanced lead scoring system.</li>
+								<li>Advanced Business Analytics Implementation: Implemented and optimized business analytics tools, including Tableau and Python, to manage commercial pricing proposals and revenue pipeline metrics, resulting in a 15% increase in team efficiency and a 20% boost in customer retention rates.</li>
+								<li>Operational Process Optimization: Redefined operational processes by introducing predictive analytics and data modeling, which enhanced service delivery and operational scalability, leading to a 10% reduction in operational costs.</li>
+								<li>Commercial Pricing and Revenue Forecasting: Created comprehensive commercial pricing strategies and conducted deal analysis discussions that directly contributed to revenue growth and pricing execution.</li>
+								<li>Strategic Reporting and Market Analysis: Developed and distributed detailed reporting packages that analyzed market data and customer insights, contributing to a 20% improvement in decision-making accuracy and a 15% uplift in customer satisfaction.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">November 2019 – May 2022</span>
+						<h2>Customer Experience Specialist</h2>
+						<span class="position">Etech Global Services, Gujarat, India</span>
+						<p class="mt-4">
+							<ul>
+								<li>CRM Analytics and Customer Retention: Leveraged extensive CRM analytics to optimize customer service operations, achieving over 95% customer retention by enhancing interaction strategies through live chat support.</li>
+								<li>Data-Driven Decision Making: Utilized business intelligence tools, including Tableau and SQL, to analyze and interpret customer data, uncovering key trends that informed strategic business objectives, improving decision-making accuracy by 20%.</li>
+								<li>Operational Efficiency and KPI Enhancement: Enhanced key performance indicators by employing data analytics and modeling techniques, improving operational efficiencies in sales and service delivery.</li>
+								<li>Strategic Reporting and Insights Communication: Compiled, reviewed, and distributed comprehensive summaries and reports on customer engagement metrics, providing actionable insights and enhancing transparency across teams.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">August 2023 – May 2024</span>
+    					<h2>Masters of Science in Business Analytics</h2>
+    					<span class="position">W. P. Carey School of Business at Arizona State University, Tempe, AZ</span>
+    					<p class="mt-4">Relevant Coursework: Business Process Analytics, Machine Learning for Business Applications, Analytical Decision Modeling, Quantitative Risk Management, Predictive Modeling, Advanced Excel and Visualization, SQL & Database Management, Statistical Analysis.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">August 2014 – May 2019</span>
+    					<h2>Bachelor of Engineering in Electronics & Communications</h2>
+    					<span class="position">Gujarat Technological University, Ahmedabad, Gujarat</span>
+    					<p class="mt-4">Relevant Coursework: Digital Signal Processing, VLSI Design, Control Systems, Embedded Systems, Analog Electronics.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5" id="downloadBtn">Download CV</a></p>
+    			</div>
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://www.linkedin.com/in/mithun-nair-3ba9b211a/" class="btn btn-primary py-4 px-5">LinkedIn</a></p>
+    			</div>
+    		</div>
+    	</div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item" data-progress="90">
-                            <div class="skill-info">
-                                <span>SQL</span>
-                                <span class="percentage">90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-progress="85">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span class="percentage">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- Add more skills here -->
-                    </div>
-                </div>
-            </div>
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function(event) {
+  event.preventDefault();  // Prevent the default link behavior
+  const link = document.createElement("a");
+  link.href = "MithunNair_DA2.pdf";  // Path to your file
+  link.download = "My_CV.pdf";  // Name of the file to download
+  link.click();  // Programmatically trigger the download
+});
+</script>
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
         </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/mnair10/face-recognition/blob/main/Face-recog.ipynb" class="block-20 zoom-effect" style="background-image: url('images/ASU-logo.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/mnair10/face-recognition/blob/main/Face-recog.ipynb">SmartFit Access System: Enhancing Gym Efficiency with Facial Recognition and Real-Time Data Analytics</a></h3>
+                <p>This project focuses on implementing face detection and recognition using a combination of MTCNN for face detection and InceptionResNetV2 for face recognition. The primary goal is to preprocess images, detect faces, and recognize them with high accuracy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+			  <a href="#" class="block-20 zoom-effect" style="background-image: url('images/download.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+			</a>		
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Digital Supply Chain Risk Simulator Tool</a></h3>
+                <p>Developed a Supply Chain Risk & Resiliency Tool using machine learning algorithms and Python, analysing historical and real-time data along with external factors to predict and mitigate supply chain disruptions effectively.
+					Applying data science techniques to analyse Customer Backlog, Supplier Factory Order Backlog, Inventory, and Buffer data, providing valuable insights into unmet demand, production delays, and strategic inventory levels.
+					Collaborating with team members proficient in R, PowerBI, and Python-supported frameworks to ensure a comprehensive and versatile toolset.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+				<a href="https://github.com/mnair10/fake-review-detection" class="block-20 zoom-effect" style="background-image: url('images/Yelp_Logo.svg.png'); background-size: contain; background-repeat: no-repeat; background-position: center; display: block; width: 100%; height: 200px;">
+				</a>				
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/mnair10/fake-review-detection">Fake Review Detection on Yelp Dataset</a></h3>
+                <p>Detecting fake reviews is crucial for maintaining the integrity and reliability of online platforms like Yelp. By analyzing customer reviews, our project aims to help businesses and consumers alike by filtering out deceptive content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/mnair10/gentech-process-optimization" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/mnair10/gentech-process-optimization">Gentech Process Optimization</a></h3>
+				  <p>This project focuses on optimizing Gentech's Proposal Creation Process to enhance operational efficiency, reduce cycle times, and improve customer satisfaction. The primary goal is to achieve a minimum of 15% reduction in the overall cycle time for each proposal.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/mnair10/ABLE-workforce-optimization" class="block-20 zoom-effect" style="background-image: url('images/Picture1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/mnair10/ABLE-workforce-optimization">Optimizing Workforce Management</a></h3>
+				  <p>This project focuses on optimizing the workforce management for ABLE Marketing using a Linear Programming (LP) approach. The primary goal is to determine the optimal staffing schedule and hiring/firing policy for Sales Executives while meeting monthly demands and minimizing the total cost incurred by ABLE.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="analytics">Analytics</button>
-                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-                <button class="filter-btn" data-filter="visualization">Visualization</button>
-            </div>
-            <div class="projects-grid">
-                <!-- Project cards will be added here -->
-            </div>
-        </div>
-    </section>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/mnair10" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <!-- Timeline items will be added dynamically -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>your.email@example.com</p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>Your Phone Number</p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Your Location</p>
-                    </div>
-                </div>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                </div>
-                <p>&copy; 2024 Your Name. All rights reserved.</p>
-            </div>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
         </div>
-    </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
-</body>
-</html> 
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Tempe, AZ</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+1 480 942 4171</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mnair10@asu.edu">mnair10@asu.edu</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mithun-nair-3ba9b211a/"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/wheresmyrasam._/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
